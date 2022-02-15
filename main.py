@@ -1,12 +1,14 @@
-import pandas as pd
+import pandas
 import tkinter
 from tkinter import *
 from tkinter import ttk
 
-doc = pd.read_csv('namehere.csv')
+# Reading CSV document
+doc = pandas.read_csv('namehere.csv')
 reversesort = 0
 
 
+# Sorts from your choice, then outputs to a new CSV; Output.csv
 def confirm():
     val = springtrap.curselection()
     if reversesort == 0:
@@ -16,6 +18,7 @@ def confirm():
     sorted.to_csv("Output.csv", index=False)
 
 
+# GUI block
 root = Tk()
 text = Text(root, width=30, height=1)
 text.insert(1.0, "Sort by which method?")

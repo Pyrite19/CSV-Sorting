@@ -21,6 +21,7 @@ def confirm():
 
 # all GUI stuff below; this section is making the frames that the listbox and buttons sit within, and the GUI itself.
 root = Tk()
+root.title("CSV Sorter")
 text = Text(root, width=30, height=1)
 text.insert(1.0, "Sort by which method?")
 lbframe = ttk.Frame(root, borderwidth=5, relief="ridge", width=200, height=100)
